@@ -27,7 +27,8 @@ export default function Header() {
                 <div className='nav-system'>
                     <div className="nav-system-link" onClick={() => handleRedirect(path.ROOT_ADMIN + path.ADMIN.MANAGE_USER)}>Quản lý người dùng</div>
                     <div className="nav-system-link" onClick={() => handleRedirect(path.ROOT_ADMIN + path.ADMIN.MANAGE_CLASS)}>Quản lý lớp</div>
-                    <div className="nav-system-link" onClick={() => handleRedirect('/system/manage-book')}>Quản lý câu hỏi</div>
+                    <div className="nav-system-link" onClick={() => handleRedirect(path.ROOT_ADMIN + path.ADMIN.MANAGE_QUESTION)}>Quản lý câu hỏi</div>
+                    <div className="nav-system-link" onClick={() => handleRedirect(path.ROOT_ADMIN + path.ADMIN.MANAGE_RESULT_HISTORY)}>Quản lý bài tập</div>
                     <div className="nav-system-link" onClick={() => handleRedirect('/system/manage-author')}>Quản lý điểm số</div>
                 </div>
             </div>

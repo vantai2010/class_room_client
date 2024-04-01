@@ -31,7 +31,9 @@ export const path = {
     },
     ADMIN: {
         MANAGE_USER: "manage-user",
-        MANAGE_CLASS: "manage-class"
+        MANAGE_CLASS: "manage-class",
+        MANAGE_QUESTION: "manage-question",
+        MANAGE_RESULT_HISTORY: "manage-result-history"
     },
     EXAM: "process-exam",
     CONTACT: "Contact"

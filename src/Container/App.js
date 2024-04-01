@@ -33,6 +33,8 @@ import DetailExam from './Student/DetailExam';
 import MonitorTheExam from './Teacher/MonitorTheExam';
 import Exam from './Exam/Exam';
 import FormExam from './Exam/FormExam';
+import ManageQuestion from './System/ManageQuestion';
+import ManageResultHistory from './System/ManageResultHistory';
 
 
 function App() {
@@ -85,6 +87,8 @@ function App() {
           <Route path={path.SYSTEM} element={<System />} >
             <Route path={path.ADMIN.MANAGE_USER} element={<ManageUser />} />
             <Route path={path.ADMIN.MANAGE_CLASS} element={<ManageClass />} />
+            <Route path={path.ADMIN.MANAGE_QUESTION} element={<ManageQuestion />} />
+            <Route path={path.ADMIN.MANAGE_RESULT_HISTORY} element={<ManageResultHistory />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

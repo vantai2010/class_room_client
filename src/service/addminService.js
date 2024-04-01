@@ -13,6 +13,30 @@ let adminService = {
         let response = await axios.get(`${URL_BACK_END}/api/get-all-users`)
         return response.data
     },
+    
+    getAllQuestion: async () => {
+        setAuthToken(localStorage[environment.REACT_APP_LOCAL_STORE_TOKEN_NAME ? environment.REACT_APP_LOCAL_STORE_TOKEN_NAME : NAME_LOCAL_STORED])
+        let response = await axios.get(`${URL_BACK_END}/api/get-all-question`
+        )
+        return response.data
+    },
+
+    createOneQuestion: async ({ teacherId,questionPrompt, options, answer, typeId, level }) => {
+        setAuthToken(localStorage[environment.REACT_APP_LOCAL_STORE_TOKEN_NAME ? environment.REACT_APP_LOCAL_STORE_TOKEN_NAME : NAME_LOCAL_STORED])
+        let response = await axios.post(`${URL_BACK_END}/api/create-one-question`, { teacherId,questionPrompt, options, answer, typeId, level })
+        return response.data
+    },
+    updateOneQuestion : async ({questionId, teacherId ,questionPrompt, options, answer, typeId, level }) => {
+        setAuthToken(localStorage[environment.REACT_APP_LOCAL_STORE_TOKEN_NAME ? environment.REACT_APP_LOCAL_STORE_TOKEN_NAME : NAME_LOCAL_STORED])
+        let response = await axios.put(`${URL_BACK_END}/api/update-one-question`,{questionId, teacherId ,questionPrompt, options, answer, typeId, level } )
+        return response.data
+    },
+
+    deleteQuestionById: async ({ questionId }) => {
+        setAuthToken(localStorage[environment.REACT_APP_LOCAL_STORE_TOKEN_NAME ? environment.REACT_APP_LOCAL_STORE_TOKEN_NAME : NAME_LOCAL_STORED])
+        let response = await axios.delete(`${URL_BACK_END}/api/delete-one-question?questionId=${questionId}`)
+        return response.data
+    },
 
     deleteUserById: async ({ userId }) => {
         setAuthToken(localStorage[environment.REACT_APP_LOCAL_STORE_TOKEN_NAME ? environment.REACT_APP_LOCAL_STORE_TOKEN_NAME : NAME_LOCAL_STORED])
@@ -31,6 +55,7 @@ let adminService = {
         return response.data
     },
 
+
     updateOneUserByAdmin: async ({ email, userId, password, firstName, lastName, roleId, image, genderId, phoneNumber }) => {
         // console.log(password, firstName, lastName, roleId, image, genderId, phoneNumber)
         let data = { email, userId, firstName, password, lastName, roleId, image, genderId, phoneNumber }
@@ -46,6 +71,11 @@ let adminService = {
     getAllClass: async () => {
         setAuthToken(localStorage[environment.REACT_APP_LOCAL_STORE_TOKEN_NAME ? environment.REACT_APP_LOCAL_STORE_TOKEN_NAME : NAME_LOCAL_STORED])
         let response = await axios.get(`${URL_BACK_END}/api/get-all-class`)
+        return response.data
+    },
+    getClassByName: async ({search}) => {
+        setAuthToken(localStorage[environment.REACT_APP_LOCAL_STORE_TOKEN_NAME ? environment.REACT_APP_LOCAL_STORE_TOKEN_NAME : NAME_LOCAL_STORED])
+        let response = await axios.get(`${URL_BACK_END}/api/search-class-by-name?search=${search}`)
         return response.data
     },
 
@@ -77,6 +107,20 @@ let adminService = {
         let response = await axios.delete(`${URL_BACK_END}/api/delete-one-class?classId=${classId}`)
         return response.data
     },
+
+
+    getAllExam: async () => {
+        setAuthToken(localStorage[environment.REACT_APP_LOCAL_STORE_TOKEN_NAME ? environment.REACT_APP_LOCAL_STORE_TOKEN_NAME : NAME_LOCAL_STORED])
+        let response = await axios.get(`${URL_BACK_END}/api/get-all-exam`)
+        return response.data
+
+    },
+
+    getQuestionsTeacher: async ({typeId, level, teacherId}) => {
+        setAuthToken(localStorage[environment.REACT_APP_LOCAL_STORE_TOKEN_NAME ? environment.REACT_APP_LOCAL_STORE_TOKEN_NAME : NAME_LOCAL_STORED])
+        let response = await axios.get(`${URL_BACK_END}/api/get-question-tearcher?typeId=${typeId}&level=${level}&teacherId=${teacherId}`)
+        return response.data
+    }
 }
 
 export default adminService
