@@ -1,0 +1,12 @@
+.class-parents {
+    min-height: 700px;
+    .asigment-title {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+    
+        p:nth-child(1), span{
+            font-weight: 700;
+        }
+    }
+}

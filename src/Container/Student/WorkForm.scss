@@ -1,0 +1,82 @@
+.exam-container{
+    position: relative;
+    padding: 0 400px;
+    background-color: rgba(0, 0, 0, 1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+
+    .exam-content{
+        background-color: white;
+        width: 670px;
+        padding: 0 6px;
+        min-height: 100vh;
+
+        .exam-child{
+            
+            width: 650px;
+            height: 117px;
+            padding: 10px;
+            margin: 10px 0;
+            box-shadow: 1px 1px 4px grey;
+
+            &.fail{
+                box-shadow: 1px 1px 6px red;
+            }
+            .exam-choise{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+
+.button-container{
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    height: 70px;
+    width: 70px;
+    background-color: rgba(44, 234, 34, 0.2);
+    border-radius: 50%;
+
+    .button {
+        cursor: pointer;
+        position: absolute;
+        top: 5px;
+        left: 6px;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        outline: none;
+        background-color: rgba(85, 227, 78,0.5);
+        border-color: transparent;
+    }
+
+    &:hover{
+        background-color: rgba(44, 234, 34, 0.5);
+
+        .button{
+            background-color: rgba(85, 227, 78,1);
+        }
+    }
+}
+
+.time-limit-container {
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    height: auto;
+    width: fit-content;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 10px;
+    .time-limit {
+
+    }
+}

@@ -1,0 +1,546 @@
+
+ 
+  // .homepage-container{
+    
+  //   .slider {
+  //     position: relative;
+    
+  //     img {
+  //       margin-top: 20px;
+  //       width: 100%;
+  //       height: 400px;
+  //       background-size: cover;
+  //       border-radius: 10px;
+  //     }
+  //   }
+    
+  //   .marquee-container {
+  //     margin-top: 4rem;
+  //     width: 100%;
+    
+  //     .marquee-content {
+  //       width: 1170px;
+  //       height: 60px;
+  //       background-color: #ffffff;
+  //       border: 4px solid rgba(5, 222, 250, 1);
+    
+  //       border-radius: 5px;
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //       marquee {
+  //         font-size: 1.5rem;
+  //         font-weight: 400;
+  //       }
+  //     }
+  //   }
+  //   .product-container {
+  //     margin-top: 20px;
+  //     width: 100%;
+    
+  //     .product-content {
+  //       text-align: center;
+  //       .product-content-up {
+  //         // padding: 1rem 0px 0px;
+  //         &::after {
+  //           content: "";
+  //           display: inline-block;
+  //           width: 100px;
+  //           height: 2px;
+  //           background-color: aqua;
+  //           border-radius: 99.9rem;
+  //         }
+  //       }
+  //       .product-content-down {
+  //         .book-content {
+  //           justify-content: space-between;
+  //           &.list-short {
+  //             justify-content: center;
+  //             gap: 10px;
+  //           }
+  //           .see-more-book-link {
+  //             color: blue;
+  //             cursor: pointer;
+  //             text-align: center;
+  //             font-size: 1.3rem;
+  //             &:hover{
+  //               text-decoration: underline;
+  //             }
+              
+  //           }
+  //           .book-image {
+  //             width: 250px;
+  //             height: 324px;
+  //             box-shadow: 0px 0px 3px #979292;
+  //             border-radius: 20px;
+  //             margin-bottom: 30px;
+  //             .book-name {
+  //               font-size: 1rem;
+  //               font-weight: 600;
+  //             }
+  //             cursor: pointer;
+  //             &:hover {
+  //               box-shadow: 0px 0px 10px #979292;
+  //             }
+  //             img {
+  //               width: 248px;
+  //               height: 200px;
+  //               border-radius: 20px 20px 0px 0px;
+  //             }
+  //             .book-start {
+  //               font-size: 1rem;
+  //               color: #ffbf00;
+  //             }
+  //           }
+
+            
+  //         }
+  //       }
+  //     }
+  //   }
+    
+  //   .btn-up-to-top {
+      
+  //   }
+    
+  // }
+
+  
+  
+  // @media (max-width: 576px) {
+  //   .book-content {
+  //     .book-image {
+  //       width: 173px !important;
+  //       img {
+  //         width: 173px !important;
+  //       }
+  //     }
+  //   }
+  //   .footer-container {
+  //     height: 800px !important;
+  //     iframe {
+  //       width: 220px;
+  //     }
+  //   }
+  // }
+  
+  // // Medium devices (tablets, 768px and up)
+  // @media (min-width: 768px) {
+  //   .book-image {
+  //     width: 220px !important;
+  //     img {
+  //       width: 220px !important;
+  //     }
+  //   }
+  //   .footer-container {
+  //     height: 830px !important;
+  //   }
+  // }
+  
+  // // Large devices (desktops, 992px and up)
+  // @media (min-width: 992px) {
+  //   .footer-container {
+  //     height: 500px !important;
+  //   }
+  // }
+  
+  // // Extra large devices (large desktops, 1200px and up)
+  // @media (min-width: 1200px) {
+  // }
+  
+
+// fix bug "ResizeObserver loop completed with undelivered notifications"
+// nguyên nhân đến từ Dropdown của antd
+// thay đổi kích thước DOM đột ngột mà không được xử lý bởi ResizeObserver
+// ẩn đi một phần tử của DOM gây ra thay đổi kích thước đột ngột mà không được xử lý
+iframe#webpack-dev-server-client-overlay{display:none!important}
+.homepage-container {
+  .slider {
+    position: relative;
+
+    img {
+      margin-top: 20px;
+      width: 100%;
+      height: 400px;
+      background-size: cover;
+      border-radius: 10px;
+    }
+  }
+  .container{
+    .title{
+      font-size: 25px;
+      margin-top: 10px;
+    }
+    .create-question-btn , .create-btn{
+      border: none;
+      padding: 5px 15px;
+      font-size: 13px;
+      border-radius: 5px;
+    }
+    .create-btn{
+      margin-left: 10px;
+    }
+    .question-level{
+      margin-top: 20px;
+    }
+  }
+
+  .marquee-container {
+    margin-top: 4rem;
+    width: 100%;
+
+    .marquee-content {
+      width: 1170px;
+      height: 60px;
+      background-color: #ffffff;
+      border: 4px solid rgba(5, 222, 250, 1);
+
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      marquee {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+    }
+  }
+  .product-container {
+    margin-top: 20px;
+    width: 100%;
+
+    .product-content {
+      text-align: center;
+      .product-content-up {
+        // padding: 1rem 0px 0px;
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 100px;
+          height: 2px;
+          background-color: aqua;
+          border-radius: 99.9rem;
+        }
+      }
+      .product-content-down {
+        .see-more-book-link {
+          span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0fe1f6;
+            cursor: pointer ;
+            text-align: center  ;
+            &:hover {
+              text-decoration: underline ;
+            }
+          }
+        }
+        .book-content {
+          justify-content: space-between;
+          &.list-short {
+            justify-content: center;
+            gap: 10px;
+          }
+          .btn-extend-time {
+            width: 80%;
+            height: auto;
+            padding: 10px;
+            border: none;
+            background-color: #05defa;
+            border-radius: 5px;
+            color:#fff;
+            font-size: 0.9rem;
+            &:hover{
+              color:#05defa;
+              background-color: #fff;
+              border: 2px solid #05defa;
+            }
+          }
+          .book-image {
+            width: 250px;
+            height: 324px;
+            box-shadow: 0px 0px 3px #979292;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            .book-name {
+              font-size: 1rem;
+              font-weight: 600;
+            }
+            cursor: pointer;
+            &:hover {
+              box-shadow: 0px 0px 10px #979292;
+            }
+            img {
+              width: 248px;
+              height: 200px;
+              border-radius: 20px 20px 0px 0px;
+            }
+            .book-start {
+              font-size: 1rem;
+              color: #ffbf00;
+            }
+          }
+        }
+        
+      }
+    }
+  }
+  .btn-up-to-top {
+  }
+
+  .question-container {
+    .list-btn-level {
+      font-size: 12px;
+      .btn-easy {
+        // border: 1px solid green;
+        // background-color: rgb(181, 250, 181);
+        // color: white;
+        border-radius: 2px;
+        margin-right: 5px;
+        width: 80px;
+        height: 26px;
+        position: relative;
+        color: #389e0d;
+        background: #f6ffed;
+        border-color: #b7eb8f;
+        font-weight: 600;
+        font-size: 15px;
+        &.selected {
+          background-color: green;
+          color: #f6ffed;
+          &::after {
+            display: block;
+          }
+        }
+        &:hover {
+          color: white;
+          background-color: green;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          display: none;
+          top: 26px;
+          left: -3px;
+          width: 0;
+          height: 0;
+          border-left: 50px solid transparent;
+          border-right: 50px solid transparent;
+          border-bottom: 40px solid green;
+        }
+      }
+      .btn-medium {
+        // border: 1px solid yellow;
+        // background-color: rgb(251, 251, 172);
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 2px;
+        margin-right: 5px;
+        width: 100px;
+        height: 26px;
+        position: relative;
+        color: #9e990d;
+        background: #ffffed;
+        border-color: #ebea8f;
+        &.selected {
+          color: black;
+          background-color: yellow;
+          &::after {
+            display: block;
+          }
+        }
+        &:hover {
+          background-color: yellow;
+          color: black;
+        }
+        &::after {
+          content: "";
+          display: none;
+          position: absolute;
+          top: 26px;
+          left: -10px;
+          width: 0;
+          height: 0;
+          border-left: 50px solid transparent;
+          border-right: 50px solid transparent;
+          border-bottom: 40px solid yellow;
+        }
+      }
+      .btn-hard {
+        // border: 1px solid red;
+        // background-color: rgb(249, 165, 165);
+        // color: white;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 2px;
+        margin-right: 5px;
+        width: 80px;
+        height: 26px;
+        position: relative;
+        color: #d4380d;
+        background: #fff2e8;
+        border-color: #ffbb96;
+        &.selected {
+          background-color: red;
+          color: white;
+          &::after {
+            display: block;
+          }
+        }
+        &:hover {
+          background-color: red;
+          color: white;
+        }
+        &::after {
+          content: "";
+          display: none;
+          position: absolute;
+          top: 26px;
+          left: -10px;
+          width: 0;
+          height: 0;
+          border-left: 50px solid transparent;
+          border-right: 50px solid transparent;
+          border-bottom: 40px solid red;
+        }
+      }
+    }
+
+    .group-list-question {
+      position: relative;
+      z-index: 100;
+      padding: 4px;
+      width: 100%;
+      background-color: white;
+      border: 1px solid green;
+      border-radius: 3px;
+      margin-top: 10px;
+      .each-question {
+        border: 1px solid rgb(218 220 224);
+        margin-top: 7px;
+        border-radius: 3px;
+        padding: 5px;
+        height: auto;
+        box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+        position: relative;
+        
+        .btn-group {
+          display: none;
+          position: absolute;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          bottom: 2px;
+          right: 10px;
+          width: 53px;
+          height: 27px;
+          border-radius: 4px;
+            font-size: 20px;
+            background-color: rgb(212, 212, 212);
+          .btn-edit {
+            cursor: pointer;
+            color: yellow;
+            &:hover {
+              background-color: blue;
+            }
+          }
+          .btn-delete {
+            cursor: pointer;
+            color: red;
+            &:hover {
+              background-color: blue;
+            }
+          }
+        }
+       
+      }
+    }
+  }
+
+  .title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: blue
+  }
+}
+.ant-dropdown {
+  .ant-dropdown-menu-title-content{
+    .list-question{
+      min-height: 30px;
+      display: flex;
+      border: 1px solid black;
+      padding: 5px 20px;
+      border-radius: 5px;
+      .ant-dropdown-menu-item {
+        max-width: 90% !important;
+        height: auto;
+      }
+      .question-text{
+        font-size: 15px;
+        .answer{
+          display: flex;
+          p:nth-child(2), p:nth-child(3), p:nth-child(4){
+            margin-left: 30px;
+          }
+        }
+      }
+      .hover-text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        font-size: 16px;
+        border: 1px solid black;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        span{
+          margin-bottom:8px ;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .book-content {
+    .book-image {
+      width: 173px !important;
+      img {
+        width: 173px !important;
+      }
+    }
+  }
+  .footer-container {
+    height: 800px !important;
+    iframe {
+      width: 220px;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .book-image {
+    width: 220px !important;
+    img {
+      width: 220px !important;
+    }
+  }
+  .footer-container {
+    height: 830px !important;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .footer-container {
+    height: 500px !important;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

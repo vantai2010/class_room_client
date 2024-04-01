@@ -1,0 +1,82 @@
+.detail-class-parents {
+
+    
+    .asigment-title {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+    
+        p:nth-child(1){
+            font-weight: 700;
+        }
+    }
+    
+    .each-assignment-parents {
+        border: 1px solid rgb(218 220 224);
+        border-radius: 10px;
+        display: flex;
+        box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+        transition: all 0.5s;
+        position: relative;
+    
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;    
+            background-color: blue;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            .icon-assignment {
+                font-size: 40px;
+                color: white;
+            }
+        }
+        .infor-assignment {
+            flex: 9;
+            padding-left: 10px;
+            position: relative;
+            .status-assignment {
+                padding: 0px 10px;
+                border-radius: 40px;
+                font-weight: 600;
+                &.closed {
+                    color: #d4380d;
+                    background: #fff2e8;
+                    border: 1px solid red;
+                }
+                &.open {
+                    color: #389e0d;
+                    background: #f6ffed;
+                    border:1px solid green;
+                }
+            }
+    
+            .point {
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                padding: 0px 10px;
+                &.higher {
+                    background-color: green;
+                    color: #f6ffed;
+                    border-color: #b7eb8f;
+                }
+                &.medium {
+                    color: black;
+                    background-color: yellow;
+                    border-color: #ebea8f;
+                }
+                &.lower {
+                    background-color: red;
+                    color: white;
+                    border-color: #ffbb96;
+                }
+            }
+        }
+
+    }
+    
+}

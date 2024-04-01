@@ -1,0 +1,51 @@
+.account-link {
+
+    .asigment-title {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+
+        p:nth-child(1){
+            font-weight: 700;
+        }
+    }
+
+    .each-account-link {
+        display: flex;
+        align-items: center;
+        border: 1px solid rgb(218 220 224);
+        padding: 5px;
+        border-radius: 10px;
+    }
+}
+.list-person-search {
+    position: relative;
+    //   z-index: 100;
+      padding: 4px;
+      width: 100%;
+      background-color: white;
+      border: 1px solid green;
+      border-radius: 3px;
+      margin-top: 10px;
+      .each-person-search {
+        border: 1px solid rgb(218 220 224);
+        margin-top: 7px;
+        border-radius: 3px;
+        padding: 5px;
+        height: auto;
+        box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .btn-plus-teacher {
+            font-size: 30px;
+            cursor: pointer;
+
+            &:hover {
+                color: green;
+            }
+        }
+      }
+
+}

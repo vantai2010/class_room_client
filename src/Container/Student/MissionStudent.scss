@@ -1,0 +1,56 @@
+.misson-of-student {
+    min-height: 500px;
+}
+.each-assignment-mission {
+    border: 1px solid rgb(218 220 224);
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+    transition: all 0.5s;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(-5px);
+    }
+   
+    .icon-container-mission {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;    
+        background-color: blue;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        .icon-assignment-mission {
+            font-size: 40px;
+            color: white;
+        }
+    }
+    .infor-assignment-mission {
+        flex: 9;
+        padding-left: 10px;
+        .status-assignment {
+            padding: 0px 10px;
+            border-radius: 40px;
+            font-weight: 600;
+            &.closed {
+                color: #d4380d;
+                background: #fff2e8;
+                border: 1px solid red;
+            }
+            &.open {
+                color: #389e0d;
+                background: #f6ffed;
+                border:1px solid green;
+            }
+        }
+    }
+
+    
+}
+
+.icon-assignment {
+    font-size: 40px;
+    color: white;
+}

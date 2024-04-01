@@ -1,0 +1,101 @@
+.group-video-container {
+    border: 1px solid rgb(218 220 224);
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+    padding: 10px;
+    height: 100vh;
+    overflow: scroll;
+    .each-video-student {
+        position: relative;
+        width: 100%;
+        height: 150px;
+        background-color: red;
+        border-radius: 5px;
+
+        .infor-video-student {
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            
+            color: white;
+            font-size: 15px;
+        }
+    }
+}
+
+.group-function-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.group-function-monitor {
+    border: 1px solid rgb(218 220 224);
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+    padding: 10px;
+    .group-video-monitor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .each-video-monitor {
+            position: relative;
+            height: 150px;
+            // background-color: red;
+            border-radius: 5px;
+            width: 49%;
+            box-sizing: border-box;
+            border: 1px solid blue;
+            padding: none;
+
+            .video-of-monitor-container {
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                video {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .infor-video-monitor {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                color: white;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .group-infor-student {
+        margin-top: 10px;
+        .group-btn-nav {
+            display: flex;
+            justify-content: space-around;
+
+            .btn-select-infor {
+                cursor: pointer;
+
+                &:hover {
+                    color: blue;
+                }
+                &.selected {
+                    color: blue;
+                    border-bottom: 1px solid blue;
+                }
+
+            }
+
+        }
+        .each-student {
+            margin: 5px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            border: 1px solid rgb(218 220 224);
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+        }
+    }
+}

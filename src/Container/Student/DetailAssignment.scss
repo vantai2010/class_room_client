@@ -1,0 +1,123 @@
+.detail-assignment {
+    min-height: 500px;
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(66, 133, 244);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        .icon-assignment {
+            font-size: 25px;
+            color: white;
+        }
+    }
+
+    .infor-assignment {
+        h3 {
+            color: rgb(66, 133, 244);
+        }
+        .infor-date {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .description-assignment {
+        margin-top: 10px;
+        padding: 10px 0;
+        border-top: 1px solid rgb(66 133 244);
+        border-bottom: 1px solid rgb(66 133 244);
+    }
+}
+
+.exam-choise-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .exam-content{
+        background-color: white;
+        width: 670px;
+        padding: 0 6px;
+        height: auto;;
+    
+        .exam-child{
+            width: 650px;
+            height: 117px;
+            padding: 10px;
+            margin: 10px 0;
+            box-shadow: 1px 1px 4px grey;
+    
+            &.fail{
+                box-shadow: 1px 1px 6px red;
+            }
+            .exam-choise{
+                display: flex;
+                justify-content: space-between;
+
+                .choise-true {
+                    appearance: none; // Ẩn giao diện mặc định
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    width: 18px; // Kích thước ô chọn
+                    height: 18px;
+                    border: 2px solid green; // Màu viền mặc định
+                    border-radius: 50%; // Hình tròn
+                    background-color: #fff; // Màu nền mặc định
+                    outline: none; // Loại bỏ đường viền khi được focus
+                    margin-right: 5px; // Khoảng cách giữa các ô chọn
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%; // Hình tròn
+                        background-color:green; // Màu nền khi chọn
+                        border-color: green;
+                        padding: 1px;
+                        position: relative;
+                        top: 3px;
+                        left: 3px;
+                      }
+                }
+                .choise-false {
+                    appearance: none; // Ẩn giao diện mặc định
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    width: 18px; // Kích thước ô chọn
+                    height: 18px;
+                    border: 2px solid red; // Màu viền mặc định
+                    border-radius: 50%; // Hình tròn
+                    background-color: #fff; // Màu nền mặc định
+                    outline: none; // Loại bỏ đường viền khi được focus
+                    margin-right: 5px; // Khoảng cách giữa các ô chọn
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%; // Hình tròn
+                        background-color:red; // Màu nền khi chọn
+                        border-color: red;
+                        padding: 1px;
+                        position: relative;
+                        top: 3px;
+                        left: 3px;
+                      }
+                }
+
+                .span-true {
+                    color: green;
+                }
+                .span-false {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+    

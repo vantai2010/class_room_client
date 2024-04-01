@@ -1,0 +1,102 @@
+.group-contact-container {
+    border: 1px solid rgb(218 220 224);
+    border-radius: 3px;
+    padding: 3px;
+    .each-contact {
+        display: flex;
+        margin-bottom: 10px;
+        padding: 5px;
+        cursor: pointer;
+
+        .avatar-contact {
+            position: relative;
+
+            .status-user{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 8px;
+                height: 8px;
+                background-color: rgb(0, 254, 0);
+                border-radius: 40%;
+
+                &.online {
+                    display: block;
+                }
+                &.offline {
+                    display: none;
+                }
+            }
+        }
+
+        .infor-user {
+            span:nth-child(1){
+
+                font-weight: 600;
+            }
+        }
+
+        &.selected, &:hover {
+            background-color: rgb(229 239 255);
+        }
+    }
+
+    .content-top {
+        display: flex;
+        align-items: center;
+    }
+
+    .content-center {
+    //     position: absolute;
+    // top: auto;
+    // bottom: 0;
+        background-color: rgb(209 205 204);
+        height: 500px;
+        max-height: 500px;
+        overflow-y: scroll;
+        width: 100%;
+        padding: 10px;
+        .each-mess {
+            display: flex;
+            margin-top: 10px;
+            &.me {
+                justify-content: flex-end;
+            }
+            .avatar-mess {
+                margin-right: 10px;
+            }
+            .content-mess {
+                background-color: white;
+                border-radius: 10px;
+                width:fit-content;
+                padding: 5px 10px;
+                .time{
+                    color: rgb(138 153 172);
+                }
+            
+            }
+        }
+    }
+
+    .content-bottom {
+        display: flex;
+        input {
+            width: 90%;
+            outline: none;
+            border: none;
+            padding-left: 10px;
+        }
+        .btn-send-mess{
+            cursor: pointer;
+            display: flex;
+            padding: 5px 0;
+            justify-content: space-around;
+            align-items: center;
+            width: 10%;
+            background-color: aqua;
+            border-radius: 30px;
+            color: blue;
+            font-size: 20px;
+        }
+    }
+}
